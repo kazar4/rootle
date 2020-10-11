@@ -1,5 +1,3 @@
-# Rootle
-
 ![](https://media.discordapp.net/attachments/176356676226514944/764673934645264384/unknown.png?width=1442&height=170)
 
 ## Overview
