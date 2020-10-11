@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset=utf-8 />
+    <link rel="stylesheet" href="styleT.css">
+    <link rel="stylesheet" type="text/css" href="proxima-nova-web-fonts-master/fonts/fonts.css"/>
+    <link href="https://allfont.net/allfont.css?fonts=franklin-gothic-demi" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.typekit.net/jdb3jvq.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcFvWFE5xskBx3WVz27MgT0LkBuAcgTYE&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+
+  </head>
+
+  <body>
+
+
+    <div id="flex-container">
+
+      <div id="content-program">
+        <div id="scroll-child">
+
+        </div>
+      </div>
+            
+      <div id="display-giant">  
+        
+      </div>
+
+    </div>
+
+    <!-- snackbar -->
+    <div id="snackbar">You have run out of relevant results...</div>
+
+<img id="logoText" src="logoText.png"></img>
+
+<div id="address-input">
+  <div id="locationField">
+    <input
+      id="autocomplete"
+      placeholder="Type in an Address..."
+      onFocus="geolocate()"
+      type="text"/>
+  </div>
+</div>
+
+
+<div id="search-choose">
+  <input
+    id ="search-choose-input"
+    placeholder="Large Business Name..."
+    type="text"/>
+</div>
+
+</div id="search_div">
+<button id="search" onclick="animateAway();getData();" style="background-color: #8f77c9;">
+  <div style="color: white;">
+    Search!
+  </div>
+</button>
+</div>
+
+<div id="toggle_wrapper">
+<div class="tooltip">
+
+  <label for="toggle">
+    <input class="input" id="toggle" type="checkbox"/>
+    <div class="toggle-wrapper"><span class="selector">
+    </span></div>
+    <p class="notification"><span class="selected"></span></p></label>
+  
+<div id="toggleText">
+  <span class="tooltiptext">Click here to search for a custom category instead of a big business alternative</span>
+</div>
+</div>
+</div>
+
+<input type="image" src="goback2.png" name="saveForm" id="goback" onclick="resetPage()"/>
+
+    
+</body>
+
+<script type="text/javascript" src="handleJSON.js" defer></script>
+<script type="text/javascript" src="auto-complete.js"></script>
+<script type="text/javascript" src="query.json"></script>
+<script src="displayT.js" defer></script>
+<script src="bgColorChange.js"></script>
+
+</html>

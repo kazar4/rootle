@@ -1,0 +1,536 @@
+html {
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+body{
+    background-color: #af9fce;
+    background-image: url("bg2.svg");
+    background-size:     100%;
+    background-repeat:   no-repeat;
+    background-attachment: fixed;
+    background-position: center 100%; 
+    transition: background-color 2500ms;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+#flex-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 1000ms ease;
+}
+
+#content-program {
+  flex: 1;
+  height: 638px;
+  text-align: center;
+  margin-top: 2px;
+  margin-left: 40px;
+  transition: opacity 1000ms ease;
+  overflow: scroll;
+  border-radius: 25px;
+}
+
+#scroll-child{
+}
+
+.place-data {
+  border-radius: 25px;
+  background:rgba(68, 68, 68, 0.6);
+  padding: 20px;
+  width: 80%;
+  height: 300px;
+
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.place-data:hover {
+  background: lightcoral;
+}
+
+.place-data:hover > #display-giant{
+    background: #bcbbbb;
+  }
+
+#display-giant {
+    flex: 2;
+    width: 40%;
+    height: 590px;
+    padding: 15px 20px 20px 20px;
+    border-radius: 25px;
+    transition: background-color 600ms ease;
+}
+
+#logoText {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  width: 50%;
+
+  transition: transform 1000ms;
+}
+
+#address-input{
+  display: block;
+  margin-left: 37%;
+  margin-top: 4%;
+
+  transition: transform 1000ms;
+}
+
+#locationField input{
+  text-align: center;
+  padding: 12px 19px;
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 150%;
+  background: #fff;
+  border-radius: 31px;
+  font-size: 18px;
+  color: #8f8fa1;
+  line-height: 2;
+  /* border-width: 4px; */
+  border-width: 0px;
+  padding-left: 17px;
+
+  transition: transform 1000ms;
+}
+
+
+#search-choose input{
+  margin-top: 1%;
+  margin-left: 39.2%;
+
+  text-align: center;
+  padding: 8px 19px;
+  position: relative;
+  display: block;
+  width: 15%;
+  height: 80%;
+  background: #fff;
+  border-radius: 31px;
+  font-size: 18px;
+  color: #8f8fa1;
+  line-height: 1.5;
+  /* border-width: 4px; */
+  border-width: 0px;
+  padding-left: 17px;
+
+  transition: transform 1000ms;
+}
+
+
+#search {
+  margin-top: 1%;
+  margin-left: 42.4%;
+
+  text-align: center;
+  padding: 8px 19px;
+  position: relative;
+  display: block;
+  width: 10%;
+  height: 80%;
+  border-radius: 31px;
+  font-size: 18px;
+  line-height: 1.5;
+  /* border-width: 4px; */
+  border-width: 0px;
+  padding-left: 17px;
+
+  transition: transform 1000ms;
+}
+
+
+#display-giant {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        color: #444;
+        grid-auto-flow: column;
+    }
+
+    #display-giant img {
+      max-width: 100%;
+      height: auto;
+
+      align-self: center;
+      border-radius: 25px;
+
+      float: left;
+      width:  80%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+    .box {
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 150%;
+    }
+
+    .a {
+        grid-column: 1 / span 3;
+        font-family: 'Franklin Gothic Demi', arial;
+        font-size: 2.7em;
+    }
+    .b {
+        grid-column: 1 / span 3;
+        font-family: sofia-pro,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.1em;
+    }
+
+    .open {
+      color: #56ff96
+    }
+
+    .closed {
+      color: #ff526f
+    }
+
+    .c {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+        font-family: 'Proxima Nova';
+        font-size: 2.0em;
+    }
+
+    .about {
+      font-weight: bold;
+    }
+
+
+    #group-images {
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 4;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      color: #444;
+      grid-auto-flow: column;
+    }
+
+    .d {
+        display: none;
+        grid-column: 0 / span 0;
+        grid-row: 4 / span 1 ;
+        align-self: center;
+
+
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        max-width: 375px;
+        overflow: hidden;
+      
+    }
+
+    .e {
+
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1 ;
+      align-self: center;
+
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      max-width: 375px; 
+      overflow: hidden;
+      max-width: 200%;
+    
+  }
+
+  
+
+    .f {
+
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1 ;
+      align-self: center;
+
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      max-width: 375px; 
+      overflow: hidden;
+      max-width: 200%;
+      
+    }
+
+    #extraInfo{
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 4 ;
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: 100%;
+      color: #444;
+      grid-auto-flow: column;
+    }
+
+    #extraInfo .g {
+      grid-column: 1 ;
+      grid-row: 1;
+      align-self: center;
+    }
+
+    #extraInfo .h {
+      grid-column: 1 ;
+      grid-row: 2;
+    }
+
+    #extraInfo .i {
+      grid-column: 1 ;
+      grid-row: 3;
+      color: #ff526f;
+    }
+
+
+
+
+    .place-data{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 50% 50%;
+      color: #444;
+      grid-auto-flow: column;
+    }
+
+    .place-data img{
+      max-width: 100%;
+
+      align-self: center;
+      border-radius: 25px;
+
+      float: left;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .place {
+    }
+
+    .place-name{
+
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+
+      font-family: 'Franklin Gothic Demi', arial;
+      font-size: 2.0em;
+    }
+
+    .place-picture{
+      grid-column: 1;
+      grid-row: 1 / span 4;
+    }
+
+    .place-info{
+  
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 1;
+
+      font-family: sofia-pro,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.1em;
+    }
+
+    .place-tags{
+  
+      grid-column: 2 / span 1;
+      grid-row: 4 / span 1;
+
+      font-family: sofia-pro,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.1em;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 25px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+#goback {
+  display: none;
+  position: absolute;
+  width: 40px;
+  top:0;
+  left:0;
+  padding: 10px;
+}
+
+
+#toggle_wrapper{
+  transition: opacity 1000ms;
+}
+
+
+
+
+label {
+  pointer-events: none;
+  position:absolute;
+  top:0;
+  left:0;
+  padding: 10px;
+}
+label .input {
+  display: none;
+}
+label .input:checked + .toggle-wrapper {
+  box-shadow: 0 8px 14px 0 rgba(243, 217, 104, 0.12);
+}
+label .input:checked + .toggle-wrapper > .selector {
+  left: calc(100% - 35px);
+  background-color:#f9cb64;
+}
+label .input:checked ~ .notification > .selected:before {
+  content: "";
+}
+label .toggle-wrapper {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: #eaeaea;
+  border-radius: 999px;
+  margin: auto;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 8px 14px 0 rgba(238, 80, 238, 0.12);
+}
+label .toggle-wrapper .selector {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  background-color: #8f77c9;
+  transition: left 0.25s ease;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tooltip container */
+.tooltip {
+  position:absolute;
+  top:0;
+  left:0;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: 105px;
+  margin-bottom: -53px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  margin-left: -10px;
+  border-width: 5px;
+  border-style: solid;
+  transform: rotate(90deg);
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
