@@ -2,7 +2,7 @@
 
 ## Overview
 
-At [Rootle.space](https://rootle.space/), we'll recommend small businesses for you to try out! Select a business you'd like to find smaller alternatives to, or simply query what tags you're looking for, and we'll show you what's local. Help out your community and root for the small guys!
+At [Rootle.space](https://rootle.space/) (the new link is at https://kazar4.com/rootle/index.html), we'll recommend small businesses for you to try out! Select a business you'd like to find smaller alternatives to, or simply query what tags you're looking for, and we'll show you what's local. Help out your community and root for the small guys!
 
 ## How we promote smaller businesses
 
