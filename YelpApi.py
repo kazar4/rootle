@@ -114,7 +114,7 @@ def get_from_business():
 
 
     if (json.loads(response.text)["total"] == 0):
-        category = "";
+        return jsonify([])
     else:
         # Concatenates all category names, adds them to search query term
         category = " ".join([x["title"] for x in json.loads(response.text)["businesses"][0]["categories"]])
