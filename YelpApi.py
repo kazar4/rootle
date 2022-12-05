@@ -112,6 +112,9 @@ def get_from_business():
     response = requests.get('https://api.yelp.com/v3/businesses/search', params=parameters,
                             auth=BearerAuth(auth_key))
 
+
+    print(json.loads(response.text))
+
     # Concatenates all category names, adds them to search query term
     category = " ".join([x["title"] for x in json.loads(response.text)["businesses"][0]["categories"]])
 
