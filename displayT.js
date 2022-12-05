@@ -105,12 +105,13 @@ function displayPlaces(obj){
     previousHTML = scroll.innerHTML
     
     baseHTML = "";
-    if (obj === undefined) {
+    if (obj.length == 0) {
       baseHTML = baseHTML + `<div class="place-data">0 Results found
     </div></div>`;
     scroll.innerHTML = baseHTML + "<br><br>";
       return;
     }
+
     for (i = 0; i < obj.length; i++){
         object = obj[i]
 

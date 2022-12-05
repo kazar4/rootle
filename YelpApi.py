@@ -77,7 +77,8 @@ def get_all_businesses():
     else:
         if len(businesses) == 0:
             # No responses, throw an error
-            response = jsonify({"error": "No results"})
+            response = jsonify([])
+            #jsonify({"error": "No results"})
             #response.headers.add('Access-Control-Allow-Origin', '*')
             return response
         else:
