@@ -90,7 +90,8 @@ def get_all_businesses():
             res = reorder(reviews, ids, len(ids))
             dict_res = {k:v for v,k in enumerate(res)}
             businesses.sort(key=lambda i: dict_res.get(i["id"]))
-            print(businesses)
+            #print(businesses)
+            print("Sending Data: " + str(len(businesses)))
 
             response = jsonify(businesses)
             #response.headers.add('Access-Control-Allow-Origin', '*')
@@ -165,7 +166,8 @@ def get_from_business():
             res = reorder(reviews, ids, len(ids))
             dict_res = {k: v for v, k in enumerate(res)}
             businesses.sort(key=lambda i: dict_res.get(i["id"]))
-            print(businesses)
+            #print(businesses)
+            print("Sending Data: " + str(len(businesses)))
 
             response = jsonify(businesses)
             #response.headers.add('Access-Control-Allow-Origin', '*')
