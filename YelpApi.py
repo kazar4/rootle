@@ -113,10 +113,12 @@ def get_from_business():
                             auth=BearerAuth(auth_key))
 
 
-    print(json.loads(response.text))
-
-    # Concatenates all category names, adds them to search query term
-    category = " ".join([x["title"] for x in json.loads(response.text)["businesses"][0]["categories"]])
+    if (json.loads(response.text)["total"] == 0) {
+        category = "";
+    } else {
+        # Concatenates all category names, adds them to search query term
+        category = " ".join([x["title"] for x in json.loads(response.text)["businesses"][0]["categories"]])
+    }
 
     from_search = ["id", "review_count", "name", "distance", "image_url", "categories"]
     counter = 0
