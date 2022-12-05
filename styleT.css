@@ -12,10 +12,7 @@ body{
     transition: background-color 2500ms;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
+/* ::-webkit-scrollbar { width: 0px; background: transparent; } */
 
 #flex-container {
     display: none;
