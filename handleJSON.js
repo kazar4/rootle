@@ -5,33 +5,35 @@ let hostVal = 'https://kazar4.com:3000';
 //}
 
 //receives a JSON file of all the data small businesses similiar to the one given
-function getBizSearch(address, biz){
+async function getBizSearch(address, biz){
     URL = hostVal + '/getFromBusiness/?loc=' + address + "&bbs=" + biz;
-    return JSON.parse(httpGet(URL));
+    return await httpGet(URL);
 }
 
 //receives a JSON file of all the small business with the query
-function getCustomSearch(address, query){
+async function getCustomSearch(address, query){
     URL = hostVal + '/getFull/?loc=' + address + "&inp=" + query;
-    return JSON.parse(httpGet(URL));
+    return await httpGet(URL);
 }
 
 //gets more details from a specific location
-function getSpecficLocation(Location_ID){
+async function getSpecficLocation(Location_ID){
     URL = hostVal + '/getBusiness/' + Location_ID;
-    return JSON.parse(httpGet(URL));
+    return await httpGet(URL);
 }
 
-function httpGet(theUrl){
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+async function httpGet(theUrl){
+    // var xmlHttp = new XMLHttpRequest();
+    // xmlHttp.timeout = 8000
+    // xmlHttp.open( "GET", theUrl, false); // false for synchronous request
+    // xmlHttp.send( null );
+    // return xmlHttp.responseText;
+    return fetch(theUrl).then((data) => data.json());
 }
 
 var business_data = [];
 
-function getData(){
+async function getData(){
     address = document.getElementById('autocomplete').value
     business_category = document.getElementById('search-choose-input').value
 
@@ -41,7 +43,7 @@ function getData(){
     //Search with big business
     if (!toggle_button) {
         //URL = hostVal + '/getFromBusiness/?loc=' + address + "&bbs=" + business_category;
-        business_data = getBizSearch(address, business_category);
+        business_data = await getBizSearch(address, business_category);
         console.log(business_data)
         displayPlaces(business_data);
         console.log("trying to display1");
@@ -49,7 +51,7 @@ function getData(){
     //General Search
     } else {
         //URL = hostVal + '/getFromBusiness/?loc=' + address + "&inp=" + business_category;
-        business_data = getCustomSearch(address, business_category);
+        business_data = await getCustomSearch(address, business_category);
         displayPlaces(business_data);
         console.log("trying to display2");
     }
