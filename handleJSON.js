@@ -1,7 +1,7 @@
 
-let hostVal = 'https://' + document.location.host;
+let hostVal = 'https://' + document.location.hostname + ":3000";
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-    hostVal = 'https://127.0.0.1:5000';
+    hostVal = 'http://127.0.0.1:5000';
 }
 
 //receives a JSON file of all the data small businesses similiar to the one given
