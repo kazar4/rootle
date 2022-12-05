@@ -9,7 +9,7 @@ from Algorithm import reorder
 app = Flask(__name__)
 cors = CORS(app)
 
-auth_key = "CabOgpuwbvxgwIlfWhVypECM1_Bi_i-V2hLnH0_tSxwLBFMtIDySK4UQcQs_LD2Fa9wlry1WWs4lc3jDC5Yl_yvykB7hs-7-QhD7t3ny1t6PIboKabvDC23_gROBX3Yx"
+auth_key = "3v32VhReRJaCPzOIZbMWGa1PzVXzTOAFbZA5-45itC7FFe_pWmZQXmBQ5rdSn0Z_c95vwMy07nqcQXW-_yTWKBC_NHYZ0TAuzlwP5_DTq3bRpnwTmqzjgPqKajyNY3Yx"
 
 
 class BearerAuth(requests.auth.AuthBase):
