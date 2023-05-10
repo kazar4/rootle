@@ -55,7 +55,8 @@ String.prototype.format = function() {
 function displayData(location_ID, index) {
 
     console.log(index);
-    object = getSpecficLocation(location_ID);
+    getSpecficLocation(location_ID).then((object) => {
+
     old_object = business_data[parseInt(index)];
     console.log(business_data);
     console.log(old_object);
@@ -95,6 +96,8 @@ function displayData(location_ID, index) {
           object.photos[2], object.rating, obj_distance, object.url);
     
     display.style.backgroundColor = "rgba(68, 68, 68, 0.6)";     
+
+})
 }
 
 function displayPlaces(obj){
